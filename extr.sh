@@ -12,8 +12,7 @@ function extr {
             echo "${path}"
             echo "${size}"
         else
-            echo "${line} doesn't match" >&2
-            exit -1
+            continue
         fi
     done < "${1:-/dev/stdin}"
 }
